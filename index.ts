@@ -1,8 +1,8 @@
 import db from "./database/db";
 
-const newDatabase = 'scanner';
-const newUser = 'scanner';
-const newPassword = '7p3S4K!N&J';
+const newDatabase = 'db-name';
+const newUser = 'user-name';
+const newPassword = 'user-password';
 
 async function createDatabaseAndUser() {
   try {
