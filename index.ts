@@ -7,7 +7,7 @@ const newPassword = 'user-password';
 async function createDatabaseAndUser() {
   try {
     await db.none(`CREATE DATABASE ${newDatabase}`);
-    await db.none(`CREATE USER ${newUser} WITH PASSWORD '${newPassword}'`);
+    await db.none(`CREATE USER ${newUser} WITH PASSWORD '${newPassword}'`); // comment this if new user creation is not needed
     await db.none(`ALTER DATABASE ${newDatabase} OWNER TO ${newUser}`);
     await db.none(`GRANT ALL PRIVILEGES ON DATABASE ${newDatabase} TO ${newUser}`);
     await db.none(`GRANT ALL PRIVILEGES ON SCHEMA public TO ${newUser}`);    
